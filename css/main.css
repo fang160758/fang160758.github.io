@@ -1289,7 +1289,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #4d3091;
+  background: #1aadff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2791,7 +2791,7 @@ ul.breadcrumb li + li:last-child {
   }
 }
 body {
-  background: url("E:\Study\Blog\themes\hexo-theme-next-7.8.0\source\images\bachground.jpg");
+  background: url("/assets/background.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: 50% 50%;
@@ -2809,9 +2809,6 @@ body {
   padding: 25px;
   -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.5);
   -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
-}
-.site-meta {
-  background: #0684bd;
 }
 .brand {
   color: #4dfc23;
