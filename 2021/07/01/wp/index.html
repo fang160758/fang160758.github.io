@@ -21,19 +21,28 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="我和我最后的倔强,握紧双手绝对不放">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于">
-<meta property="og:url" content="http://example.com/about/index.html">
+  <meta name="description" content="ctf-2.unprotect.apk简单题，并没有做什么防护，裸apk，只要调试起来就弄出flag  直接定位到check的地方，发现是由三组数据在check，其中v48是根据参数‘’aaaa‘’生成的，v63是常数组，最后v66是根据我们的输入生成的，从前面很容易分析出来，我们的输入是64位，每四个生成一位最后共生成16个数据放到v66+100的地方。check表达式是tmp +&#x3D;（v48">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2021国赛线下">
+<meta property="og:url" content="http://example.com/2021/07/01/wp/index.html">
 <meta property="og:site_name" content="fangのBlog">
-<meta property="og:description" content="我和我最后的倔强,握紧双手绝对不放">
+<meta property="og:description" content="ctf-2.unprotect.apk简单题，并没有做什么防护，裸apk，只要调试起来就弄出flag  直接定位到check的地方，发现是由三组数据在check，其中v48是根据参数‘’aaaa‘’生成的，v63是常数组，最后v66是根据我们的输入生成的，从前面很容易分析出来，我们的输入是64位，每四个生成一位最后共生成16个数据放到v66+100的地方。check表达式是tmp +&#x3D;（v48">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-06-04T09:51:11.000Z">
-<meta property="article:modified_time" content="2021-06-05T18:10:26.529Z">
+<meta property="og:image" content="c:/Users/fang/AppData/Roaming/Typora/typora-user-images/image-20210630150011843.png">
+<meta property="og:image" content="c:/Users/fang/Desktop/screen.png">
+<meta property="og:image" content="c:/Users/fang/AppData/Roaming/Typora/typora-user-images/image-20210630151140577.png">
+<meta property="og:image" content="c:/Users/fang/AppData/Roaming/Typora/typora-user-images/image-20210630151215444.png">
+<meta property="og:image" content="c:/Users/fang/AppData/Roaming/Typora/typora-user-images/image-20210630151316170.png">
+<meta property="og:image" content="c:/Users/fang/AppData/Roaming/Typora/typora-user-images/image-20210630151427627.png">
+<meta property="article:published_time" content="2021-07-01T02:37:15.889Z">
+<meta property="article:modified_time" content="2021-07-01T02:39:29.727Z">
 <meta property="article:author" content="fang">
+<meta property="article:tag" content="安卓调试">
+<meta property="article:tag" content="CTF">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:/Users/fang/AppData/Roaming/Typora/typora-user-images/image-20210630150011843.png">
 
-<link rel="canonical" href="http://example.com/about/">
+<link rel="canonical" href="http://example.com/2021/07/01/wp/">
 
 
 <script id="page-configurations">
@@ -41,13 +50,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>关于 | fangのBlog
-</title>
+  <title>2021国赛线下 | fangのBlog</title>
   
 
 
@@ -188,43 +196,137 @@
       <div class="main-inner">
         <div class="content-wrap">
           
-  
-  
 
-          <div class="content page posts-expand">
+          <div class="content post posts-expand">
             
 
     
-    
-    
-    <div class="post-block" lang="zh-CN">
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/07/01/wp/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/assets/head.jpg">
+      <meta itemprop="name" content="fang">
+      <meta itemprop="description" content="我和我最后的倔强,握紧双手绝对不放">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="fangのBlog">
+    </span>
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          2021国赛线下
+        </h1>
 
-<h1 class="post-title" itemprop="name headline">关于
-</h1>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
 
-<div class="post-meta">
+              <time title="创建时间：2021-07-01 10:37:15 / 修改时间：10:39:29" itemprop="dateCreated datePublished" datetime="2021-07-01T10:37:15+08:00">2021-07-01</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Android/" itemprop="url" rel="index"><span itemprop="name">Android</span></a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>872</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <span id="more"></span>
+
+<h1 id="ctf-2-unprotect-apk"><a href="#ctf-2-unprotect-apk" class="headerlink" title="ctf-2.unprotect.apk"></a>ctf-2.unprotect.apk</h1><p>简单题，并没有做什么防护，裸apk，只要调试起来就弄出flag</p>
+<p><img src="C:\Users\fang\AppData\Roaming\Typora\typora-user-images\image-20210630150011843.png" alt="image-20210630150011843"></p>
+<p>直接定位到check的地方，发现是由三组数据在check，其中v48是根据参数‘’aaaa‘’生成的，v63是常数组，最后v66是根据我们的输入生成的，从前面很容易分析出来，我们的输入是64位，每四个生成一位最后共生成16个数据放到v66+100的地方。check表达式是tmp +=（v48[i] ^ v66[i+100]）+ v63[i] == 1740，开始我以为是要根据限制去爆破v66,后来发现v63的前16位之和恰好等于1740，因此表达式最后就是v66与v48进行比较。</p>
+<p>dump出v48的数据，然后根据前面input的生成算法逆向回去就能拿到flag，脚本给出</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">v48 = [</span><br><span class="line">  <span class="number">0x4C</span>, <span class="number">0x02</span>, <span class="number">0x99</span>, <span class="number">0x34</span>, <span class="number">0xEB</span>, <span class="number">0xC0</span>, <span class="number">0x3F</span>, <span class="number">0xCB</span>, <span class="number">0x41</span>, <span class="number">0xB4</span>, </span><br><span class="line">  <span class="number">0x6C</span>, <span class="number">0x37</span>, <span class="number">0x3F</span>, <span class="number">0xF5</span>, <span class="number">0x02</span>, <span class="number">0x86</span>]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">code = <span class="string">&quot;0123456789ABCDEF&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">printf</span>(<span class="params">n</span>):</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="built_in">hex</span>(<span class="built_in">ord</span>(code[n]))[-<span class="number">2</span>:],end=<span class="string">&#x27;&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> x <span class="keyword">in</span> v48:</span><br><span class="line">    printf(x &gt;&gt; <span class="number">4</span>)</span><br><span class="line">    printf(x &amp; <span class="number">0xf</span>)</span><br><span class="line"><span class="comment">#flag&#123;3443303239393334454243303346434234314234364333373346463530323836&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="C:\Users\fang\Desktop\screen.png" alt="screen"></p>
+<h1 id="CrakeMe-exe"><a href="#CrakeMe-exe" class="headerlink" title="CrakeMe.exe"></a>CrakeMe.exe</h1><p>这也是一个简单题，唯一的难点在有点混淆和main开始有点反调试。都很容易绕过。</p>
+<p><img src="C:\Users\fang\AppData\Roaming\Typora\typora-user-images\image-20210630151140577.png" alt="image-20210630151140577"></p>
+<p>首先判断输入要小于16位。</p>
+<p><img src="C:\Users\fang\AppData\Roaming\Typora\typora-user-images\image-20210630151215444.png" alt="image-20210630151215444"></p>
+<p>判断前五位为“flag{”和第十一位“_”以及最后一位“}”</p>
+<p><img src="C:\Users\fang\AppData\Roaming\Typora\typora-user-images\image-20210630151316170.png" alt="image-20210630151316170"></p>
+<p>这里是判断倒数的四到二位。根据base表很容易就确定为base64，验证正确。得到为“CTF”</p>
+<p><img src="C:\Users\fang\AppData\Roaming\Typora\typora-user-images\image-20210630151427627.png" alt="image-20210630151427627"></p>
+<p>这里就是判断“_”前面部分，根据sub_591170函数生成，我们不用知道该函数做了什么，只要dump出结果就行。</p>
+<p>最后flag：flag{HIUKF_CTF}</p>
+
+    </div>
+
+    
+    
+    
+	
+	
+	<div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束 <i class="fa fa-heart"></i> 感谢阅读-------------</div>
+	
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/%E5%AE%89%E5%8D%93%E8%B0%83%E8%AF%95/" rel="tag"><i class="fa fa-tag"></i> 安卓调试</a>
+              <a href="/tags/CTF/" rel="tag"><i class="fa fa-tag"></i> CTF</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/06/07/2021-06-07/" rel="prev" title="2021-06-07 晴">
+      <i class="fa fa-chevron-left"></i> 2021-06-07 晴
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
-          
-      </div>
-      
-      
-      
-    </div>
-    
-
-    
-    
-    
 
 
           </div>
@@ -275,6 +377,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ctf-2-unprotect-apk"><span class="nav-number">1.</span> <span class="nav-text">ctf-2.unprotect.apk</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CrakeMe-exe"><span class="nav-number">2.</span> <span class="nav-text">CrakeMe.exe</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
