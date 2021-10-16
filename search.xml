@@ -276,8 +276,8 @@
 <p>oat文件可以通过oatdump工具来查看具体内容。详细使用通过adb shell连接手机后输入oatdump查看。</p>
 <h1 id="boot-oat与boot-art"><a href="#boot-oat与boot-art" class="headerlink" title="boot.oat与boot.art"></a>boot.oat与boot.art</h1><p>由于考虑到几乎所有的APK程序都会使用到Android Framework中提供的基础类，在代码的(.text)段会引用Framework Image和Framework Code中的内容。因此在AOPS编译时，会将所有的这些公共类放到专门的一个Oat文件中，这就是boot.oat与boot.art。</p>
 <blockquote>
-<p>  /data/dalvik-cache/arm64/system@<a href="mailto:&#x66;&#114;&#97;&#109;&#101;&#119;&#111;&#114;&#x6b;&#x40;&#x62;&#x6f;&#x6f;&#x74;&#x2e;&#97;&#114;&#x74;">&#x66;&#114;&#97;&#109;&#101;&#119;&#111;&#114;&#x6b;&#x40;&#x62;&#x6f;&#x6f;&#x74;&#x2e;&#97;&#114;&#x74;</a></p>
-<p>  /data/dalvik-cache/arm64/system@<a href="mailto:&#102;&#114;&#97;&#x6d;&#101;&#119;&#111;&#114;&#107;&#x40;&#x62;&#x6f;&#x6f;&#x74;&#46;&#111;&#x61;&#x74;">&#102;&#114;&#97;&#x6d;&#101;&#119;&#111;&#114;&#107;&#x40;&#x62;&#x6f;&#x6f;&#x74;&#46;&#111;&#x61;&#x74;</a></p>
+<p>  /data/dalvik-cache/arm64/system@<a href="mailto:&#102;&#x72;&#x61;&#109;&#101;&#119;&#x6f;&#114;&#x6b;&#x40;&#x62;&#x6f;&#x6f;&#116;&#46;&#97;&#x72;&#116;">&#102;&#x72;&#x61;&#109;&#101;&#119;&#x6f;&#114;&#x6b;&#x40;&#x62;&#x6f;&#x6f;&#116;&#46;&#97;&#x72;&#116;</a></p>
+<p>  /data/dalvik-cache/arm64/system@<a href="mailto:&#x66;&#x72;&#97;&#x6d;&#101;&#x77;&#x6f;&#x72;&#x6b;&#x40;&#98;&#x6f;&#111;&#x74;&#x2e;&#111;&#97;&#x74;">&#x66;&#x72;&#97;&#x6d;&#101;&#x77;&#x6f;&#x72;&#x6b;&#x40;&#98;&#x6f;&#111;&#x74;&#x2e;&#111;&#97;&#x74;</a></p>
 </blockquote>
 <p>boot.art中包含了指向boot.oat中方法代码的指针，他被称为启动镜像（Boot Image），并且被加载的位置是固定的。boot.oat被加载的地址紧随着boot.art</p>
 <h1 id="Dalvik到Art的转换"><a href="#Dalvik到Art的转换" class="headerlink" title="Dalvik到Art的转换"></a>Dalvik到Art的转换</h1><p>从源码入手很容易找到是如何转换的。关键代码如下：</p>
